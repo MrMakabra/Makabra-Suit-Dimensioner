@@ -19,3 +19,6 @@
 # Ignore all local history of files
 .history
 .ionide
+
+#Python Stuff
+dimensioner_main_files/__pycache__
