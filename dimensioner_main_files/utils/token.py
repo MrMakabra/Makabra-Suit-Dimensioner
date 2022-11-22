@@ -1,4 +1,8 @@
+import os
 import json
+from utils.pathfinder import Pathfinder
+
+TOKENS_FILE_PATH = Pathfinder().get_base_dir_path()  + '/constants/tokens.json'
 
 class Token():
     def __init__(self) -> None:
@@ -12,7 +16,7 @@ class Token():
         return _token
 
     def _makedir(self):
-        f = open('dimensioner_main_files/constants/tokens.json', 'r')
+        f = open(TOKENS_FILE_PATH, 'r')
         content = f.read()
         _dir = json.loads(content)
         f.close()
